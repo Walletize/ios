@@ -12,6 +12,7 @@ struct WalletizeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(\.font, Nunito.body)
         }
     }
 }
