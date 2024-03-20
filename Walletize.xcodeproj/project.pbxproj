@@ -44,6 +44,11 @@
 		4CD73F7F2BA8748500D15242 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4CD73F7E2BA8748500D15242 /* KeychainAccess */; };
 		4CD73F812BA87C8D00D15242 /* KeyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD73F802BA87C8D00D15242 /* KeyGenerator.swift */; };
 		4CD73F832BA87CB700D15242 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD73F822BA87CB700D15242 /* User.swift */; };
+		4CBFEF5B2B72617F00B9F558 /* OverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFEF5A2B72617F00B9F558 /* OverviewView.swift */; };
+		4CBFEF5D2B72621C00B9F558 /* AssetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFEF5C2B72621C00B9F558 /* AssetsView.swift */; };
+		4CBFEF5F2B72622500B9F558 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFEF5E2B72622500B9F558 /* TransactionsView.swift */; };
+		4CBFEF612B72623000B9F558 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFEF602B72623000B9F558 /* BudgetView.swift */; };
+		4CBFEF642B73D83600B9F558 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBFEF632B73D83600B9F558 /* TransactionRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +90,11 @@
 		4CBFEF552B6F8E4800B9F558 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		4CD73F802BA87C8D00D15242 /* KeyGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyGenerator.swift; sourceTree = "<group>"; };
 		4CD73F822BA87CB700D15242 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4CBFEF5A2B72617F00B9F558 /* OverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewView.swift; sourceTree = "<group>"; };
+		4CBFEF5C2B72621C00B9F558 /* AssetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsView.swift; sourceTree = "<group>"; };
+		4CBFEF5E2B72622500B9F558 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		4CBFEF602B72623000B9F558 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		4CBFEF632B73D83600B9F558 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +155,15 @@
 		4CBFEF122B6B7C8000B9F558 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CBFEF622B73D65200B9F558 /* Components */,
 				4CBFEF062B6B6BD900B9F558 /* ContentView.swift */,
 				4CBFEF132B6B7C9C00B9F558 /* LoginView.swift */,
 				4CBFEF4A2B6F603000B9F558 /* SignupView.swift */,
 				4CBFEF522B6F8A6D00B9F558 /* MainView.swift */,
+				4CBFEF5A2B72617F00B9F558 /* OverviewView.swift */,
+				4CBFEF5C2B72621C00B9F558 /* AssetsView.swift */,
+				4CBFEF5E2B72622500B9F558 /* TransactionsView.swift */,
+				4CBFEF602B72623000B9F558 /* BudgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +229,14 @@
 				4CBFEF462B6E3B1C00B9F558 /* Nunito.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4CBFEF622B73D65200B9F558 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4CBFEF632B73D83600B9F558 /* TransactionRowView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,16 +340,21 @@
 				4CBFEF1E2B6B8A5000B9F558 /* Env.swift in Sources */,
 				4CD73F832BA87CB700D15242 /* User.swift in Sources */,
 				4CBFEF142B6B7C9C00B9F558 /* LoginView.swift in Sources */,
+				4CBFEF5D2B72621C00B9F558 /* AssetsView.swift in Sources */,
 				4CBFEF1A2B6B7FCA00B9F558 /* AuthService.swift in Sources */,
 				4CBFEF512B6F675900B9F558 /* Signup.swift in Sources */,
 				4CBFEF472B6E3B1C00B9F558 /* Nunito.swift in Sources */,
 				4CBFEF4D2B6F60BA00B9F558 /* SignupViewModel.swift in Sources */,
+				4CBFEF5F2B72622500B9F558 /* TransactionsView.swift in Sources */,
 				4CBFEF072B6B6BD900B9F558 /* ContentView.swift in Sources */,
 				4CBFEF562B6F8E4800B9F558 /* ContentViewModel.swift in Sources */,
+				4CBFEF612B72623000B9F558 /* BudgetView.swift in Sources */,
 				4CBFEF052B6B6BD900B9F558 /* WalletizeApp.swift in Sources */,
 				4CD73F812BA87C8D00D15242 /* KeyGenerator.swift in Sources */,
 				4CBFEF232B6BAB9300B9F558 /* Login.swift in Sources */,
 				4CBFEF4F2B6F66B300B9F558 /* RuntimeError.swift in Sources */,
+				4CBFEF5B2B72617F00B9F558 /* OverviewView.swift in Sources */,
+				4CBFEF642B73D83600B9F558 /* TransactionRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

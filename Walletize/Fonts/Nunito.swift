@@ -9,6 +9,15 @@ import Foundation
 import SwiftUI
 
 struct Nunito {
-    static let body = Font.custom("Nunito-Regular", size: 16)
-    static let title = Font.custom("Nunito-Bold", size: 32)
+    static func regular(size: CGFloat) -> Font {
+        return Font.custom("Nunito-Regular", size: size)
+    }
+    
+    static func bold(size: CGFloat) -> Font {
+        return Font.custom("Nunito-Bold", size: size)
+    }
+    
+    static func semibold(size: CGFloat) -> Font {
+        return Font.custom("Nunito-SemiBold", size: size)
+    }
 }

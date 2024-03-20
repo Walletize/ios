@@ -15,20 +15,19 @@ struct LoginView: View {
             VStack(alignment: .leading, spacing: 32) {
                 VStack(alignment: .leading) {
                     Text("Welcome,")
-                        .font(Nunito.title)
+                        .font(Nunito.bold(size: 36))
                     Text("Please log in to continue")
-                        .font(.system(size: 20))
-                        .font(Nunito.body)
+                        .font(Nunito.regular(size: 20))
                 }
                 
                 VStack(alignment: .leading, spacing: 20) {
                     VStack(alignment: .leading) {
                         Text("Email")
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                         TextField("", text: $loginViewModel.email)
                             .textInputAutocapitalization(.never)
                             .keyboardType(.emailAddress)
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                             .padding()
                             .clipShape(.rect(cornerRadius: 8))
                             .overlay(
@@ -38,9 +37,9 @@ struct LoginView: View {
                     }
                     VStack(alignment: .leading) {
                         Text("Password")
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                         SecureField("", text: $loginViewModel.password)
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                             .padding()
                             .clipShape(.rect(cornerRadius: 8))
                             .overlay(
@@ -56,7 +55,7 @@ struct LoginView: View {
                         loginViewModel.login()
                     }, label: {
                         Text("Log in")
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                             .bold()
                             .padding(.horizontal, 40)
                             .padding(.vertical, 10)
@@ -68,12 +67,12 @@ struct LoginView: View {
                 HStack {
                     Spacer()
                     Text("Not on Walletize?")
-                        .font(Nunito.body)
+                        .font(Nunito.regular(size: 16))
                     NavigationLink {
                         SignupView()
                     } label: {
                         Text("Create an account")
-                            .font(Nunito.body)
+                            .font(Nunito.regular(size: 16))
                             .underline()
                     }
                 }
