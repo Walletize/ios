@@ -15,17 +15,10 @@ class SignupViewModel: ObservableObject {
     func signup() {
         service.signup(email: email, password: password) { result in
             switch result {
-            case .success():
-                self.service.login(email: self.email, password: self.password) { result in
-                    switch result {
-                    case .success(let token):
-                        UserDefaults.standard.setValue(token, forKey: "jsonwebtoken")
-                        DispatchQueue.main.async {
-                            self.service.token = token
-                        }
-                    case .failure(let error):
-                        print(error.localizedDescription, error)
-                    }
+            case .success(let token):
+                UserDefaults.standard.setValue(token, forKey: "jsonwebtoken")
+                DispatchQueue.main.async {
+                    self.service.token = token
                 }
             case .failure(let error):
                 print(error.localizedDescription, error)

@@ -8,9 +8,8 @@
 import Foundation
 
 struct Login: Codable {
-    var token: String?
-    var status: Bool?
-    var message: String?
+    var accessToken: String?
+    var refreshToken: String?
 }
 
 struct LoginRequest: Codable {

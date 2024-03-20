@@ -15,10 +15,16 @@ class LoginViewModel: ObservableObject {
     func login() {
         service.login(email: email, password: password) { result in
             switch result {
-            case .success(let token):
-                UserDefaults.standard.setValue(token, forKey: "jsonwebtoken")
+            case .success(let accessToken):
+                do {
+                    try self.service.keychain.set(accessToken, key: "accessToken")
+                }
+                catch let error {
+                    print(error)
+                }
+                
                 DispatchQueue.main.async {
-                    self.service.token = token
+                    self.service.token = accessToken
                 }
             case .failure(let error):
                 print(error.localizedDescription, error)
@@ -27,7 +33,13 @@ class LoginViewModel: ObservableObject {
     }
     
     func signout() {
-        UserDefaults.standard.removeObject(forKey: "jsonwebtoken")
+        do {
+            try self.service.keychain.remove("accessToken")
+        }
+        catch let error {
+            print(error)
+        }
+        
         DispatchQueue.main.async {
             self.service.token = nil
         }
